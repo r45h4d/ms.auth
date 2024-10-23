@@ -17,7 +17,9 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    Long id;
+    private Long id;
 
-    String name;
+    private String username;
+
+    private String password;
 }

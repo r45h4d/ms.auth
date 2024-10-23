@@ -1,4 +1,7 @@
 package az.ingress.model.dto;
 
-public record UserResponseDto(String id) {
+import lombok.Builder;
+
+@Builder
+public record UserResponseDto(String id, String username, String password) {
 }

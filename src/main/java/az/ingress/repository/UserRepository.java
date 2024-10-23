@@ -1,10 +1,10 @@
 package az.ingress.repository;
 
 import az.ingress.entity.UserEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
-@Repository
-public interface UserRepository extends JpaRepository<UserEntity, Long> {
-    UserEntity findByName(String name);
+import java.util.Optional;
+
+public interface UserRepository extends CrudRepository<UserEntity, Long> {
+    Optional<UserEntity> findByUsername(String username);
 }
